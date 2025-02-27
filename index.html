@@ -1,0 +1,25 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<body>
+<div align="center">
+<H1> HX Embedded Service </H1>
+</div>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00Dba000000yWxt',
+				'HX_Web_Chat',
+				'https://travelhx--hxnexus.sandbox.my.site.com/ESWHXWebChat1740573407524',
+				{
+					scrt2URL: 'https://travelhx--hxnexus.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://travelhx--hxnexus.sandbox.my.site.com/ESWHXWebChat1740573407524/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</body>
